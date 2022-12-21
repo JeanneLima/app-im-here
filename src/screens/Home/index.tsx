@@ -1,9 +1,9 @@
 import { Text, TextInput, TouchableOpacity, View } from 'react-native';
-import { styles } from "./styles";
+import { styles } from './styles';
 
 export default function Home() {
   function handleParticipantAdd() {
-    console.log("Você clicou no botão de adicionar!")
+    console.log('Você clicou no botão de adicionar!')
   }
 
   return (
@@ -16,20 +16,22 @@ export default function Home() {
         Quarta, 21 de dezembro de 2022.
       </Text>
       
-      <TextInput 
-        style={styles.input} 
-        placeholder="Nome do participante"
-        placeholderTextColor="#6B6B6B"
-      />
+      <View style={styles.form}>
+        <TextInput 
+          style={styles.input} 
+          placeholder='Nome do participante'
+          placeholderTextColor='#6B6B6B'
+        />
 
-      <TouchableOpacity 
-        style={styles.button}
-        onPress={handleParticipantAdd}
-      >
-        <Text style={styles.buttonText}>
-          +
-        </Text>
-      </TouchableOpacity>
+        <TouchableOpacity 
+          style={styles.button}
+          onPress={handleParticipantAdd}
+        >
+          <Text style={styles.buttonText}>
+            +
+          </Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
